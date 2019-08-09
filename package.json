@@ -1,0 +1,79 @@
+{
+  "name": "rappi-cokoa",
+  "version": "1.0.0",
+  "description": "Koa boilerplate for Rappi",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "NODE_ENV=test ava --verbose --timeout=5000",
+    "coverage": "NODE_ENV=test nyc --reporter=text ava --timeout=5000",
+    "migrate": "cd src & knex migrate:latest & cd ..",
+    "rollback": "cd src & knex migrate:rollback & cd ..",
+    "lint": "xo",
+    "docs": "apidoc -i src/ -o src/docs/"
+  },
+  "keywords": [
+    "koa",
+    "boilerplate",
+    "pgsql",
+    "ava"
+  ],
+  "author": "Jinme Mirabal",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.7",
+    "ava": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2",
+    "xo": "^0.24.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "axios-retry": "^3.1.2",
+    "dotenv": "^8.0.0",
+    "jwt-simple": "^0.5.6",
+    "knex": "^0.17.5",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-combine-routers": "^4.0.2",
+    "koa-helmet": "^4.2.0",
+    "koa-i18n": "^2.1.0",
+    "koa-locale": "^1.3.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "pg": "^7.11.0",
+    "winston": "^3.2.1",
+    "winston-loggly-bulk": "^3.0.1"
+  },
+  "apidoc": {
+    "title": "RappiPay - Cokoa",
+    "url": "https://cokoa.rappi.pay.net"
+  },
+  "xo": {
+    "ignores": [
+      "src/migrations",
+      "src/docs",
+      "**/*.test.js"
+    ],
+    "extends": "airbnb-base",
+    "rules": {
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "object-curly-newline": 0,
+      "no-underscore-dangle": 0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"USER_NOT_FOUND": "User not found.",
+	"CONTROLLED_ERROR": "Controller error.",
+	"BUSINESS_ERROR": "Business error.",
+	"MISSING_AUTH_HEADER": "Authentication header not found.",
+	"WRONG_AUTH_TYPE": "Authentication type is wrong.",
+	"WRONG_ISSUER": "Issuer expected is different.",
+	"WRONG_AUDIENCE": "Audience expected it's wrong.",
+	"WRONG_SCOPE": "Scope it's not enough or different."
+}
