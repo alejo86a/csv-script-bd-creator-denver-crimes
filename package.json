@@ -38,7 +38,7 @@
     "axios-retry": "^3.1.2",
     "dotenv": "^8.0.0",
     "jwt-simple": "^0.5.6",
-    "knex": "^0.17.5",
+    "knex": "^0.20.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-combine-routers": "^4.0.2",
